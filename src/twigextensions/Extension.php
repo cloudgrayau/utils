@@ -10,17 +10,17 @@ class Extension extends AbstractExtension {
     // Public Methods
     // =========================================================================
     
-    public function getName() {
+    public function getName(): string {
         return 'Twig Extensions';
     }
 
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction('cgGetValue', [$this, 'getValue']),
         ];
     }
     
-    public function getValue($array, $key, $default = null) {
+    public function getValue($array, $key, $default = null): mixed {
         if (is_array($array)) {
             return ArrayHelper::getValue($array, $key, $default);
         }
