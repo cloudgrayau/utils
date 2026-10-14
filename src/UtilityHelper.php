@@ -11,8 +11,8 @@ abstract class UtilityHelper {
   // Native
   // =========================================================================
 
-  public static function footer(): MarkdownContent {
-    return MarkdownContent::make('cloudgray-footer', self::footerHtml())->displayInPane(false);
+  public static function footer(string $id = 'cloudgray-footer'): MarkdownContent {
+    return MarkdownContent::make($id, self::footerHtml())->displayInPane(false);
   }
   
   public static function footerHtml(): string {
