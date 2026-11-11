@@ -2,7 +2,7 @@
     "name": "cloudgrayau/utils",
     "description": "Base plugin utilities for Craft CMS.",
     "type": "library",
-    "version": "2.0.0-alpha.1",
+    "version": "2.0.0",
     "support": {
         "docs": "https://github.com/cloudgrayau/utils",
         "issues": "https://github.com/cloudgrayau/utils/issues"
@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^6.0.0-alpha",
+        "craftcms/cms": "^6.0.0",
         "php": "^8.5"
     },
     "autoload": {

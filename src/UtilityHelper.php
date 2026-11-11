@@ -2,7 +2,7 @@
 namespace cloudgrayau\utils;
 
 use Craft;
-use CraftCms\Cms\Form\Nodes\MarkdownContent;
+use CraftCms\Cms\Ui\Nodes\MarkdownContent;
 use CraftCms\Cms\Helpers\Html;
 use CraftCms\Cms\Support\Arr;
 
