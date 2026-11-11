@@ -17,8 +17,9 @@ abstract class UtilityHelper {
   
   public static function footerHtml(): string {
     $svg = file_get_contents(__DIR__.'/resources/cloudgray.svg');
-    $src = 'data:image/svg+xml;base64,'.base64_encode($svg);
-    return '<hr style="border-color:#e9eced;"><p style="text-align:right;margin-top:1em;"><a href="https://cloudgray.com.au/" target="_blank" style="text-decoration:none;color:#000;"><img src="'.$src.'" width="30" height="30" alt="" style="display:inline-block;vertical-align:middle;margin-right:3px;"> <small>Cloud Gray</small></a></p>';
+    $src = 'data:image/svg+xml;base64,' . base64_encode($svg);
+    $logo = '<span role="img" aria-hidden="true" style="display:inline-block;vertical-align:middle;width:30px;height:30px;margin-right:3px;background-color:currentColor;-webkit-mask:url(' . $src . ') center/contain no-repeat;mask:url(' . $src . ') center/contain no-repeat;"></span>';
+    return '<hr><p style="text-align:right;margin-top:1em;"><a href="https://cloudgray.com.au/" target="_blank" style="text-decoration:none;color:inherit;">'.$logo.' <small>Cloud Gray</small></a></p>';
   }
 
   public static function configWarning(string $handle, string $setting): ?string {
